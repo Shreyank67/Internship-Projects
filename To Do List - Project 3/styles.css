@@ -1,0 +1,206 @@
+:root
+{
+    --gradient1 : linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+    --gradient2 : linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    --gradient3 : linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    --gradient4 : linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+    --gradient5 : linear-gradient(109.6deg, rgba(113, 14, 51, 0.83) 15.2%, rgba(217, 43, 23, 0.95) 96.8%);
+    --dark : #606470;
+    --darker : #293545;
+    --darkest : #111827;
+    --light : #c9d6df;
+    --Dblue : #93deff;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--gradient2);
+    color: var(--light);
+}
+
+header
+{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1
+{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    padding-left: 5px;
+    color: var(--light);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* text gradient code */
+    background-image: var(--gradient3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#task-form
+{
+    display: flex;
+}
+
+input, button
+{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task-input
+{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--Dblue);
+    font-size: 18px;
+}
+
+#task-input::placeholder
+{
+    color: var(--Dblue);
+    opacity: 0.6;
+}
+
+#task-submit
+{
+    color: #93deff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    /* text gradient code */
+    background-image: var(--gradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#task-submit:hover
+{
+    opacity: 0.7;
+}
+
+#task-submit:active
+{
+    opacity: 0.67;
+}
+
+main
+{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list
+{
+    padding: 1rem;
+}
+
+.task-list h2
+{
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--light);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* text gradient code */
+    background-image: var(--gradient3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#tasks .task 
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task .content
+{
+    flex: 1 1 0%;
+}
+
+.task .content .text
+{
+    color: aqua;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+}
+
+.task .content .text:not(:read-only)
+{
+    color: #FF3CAC;
+}
+
+.task .actions
+{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button
+{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.task .actions button:hover
+{
+    opacity: 0.7;
+}
+
+.task .actions button:active
+{
+    opacity: 0.67;
+}
+
+.task .actions .edit
+{
+        /* text gradient code */
+        background-image: var(--gradient1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete
+{
+        /* text gradient code */
+        background-image: var(--gradient4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
